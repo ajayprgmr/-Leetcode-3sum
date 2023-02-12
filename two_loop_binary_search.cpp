@@ -10,7 +10,6 @@ vector<vector<int>> threeSum(vector<int>& nums) {
         for (int j = i + 1; j < nums.size() - 1; j++) {
             if (j > i + 1 && nums[j] == nums[j - 1]) continue;
             int target = 0 - nums[i] - nums[j];
-           ```
  if (visited.count({nums[j], target})) continue;
             if (binary_search(nums.begin() + j + 1, nums.end(), target)) {
                 result.push_back({nums[i], nums[j], target});
